@@ -1,0 +1,1 @@
+select count(*)  from client;-->SABER LA CANTIDAD DE CLIENTES

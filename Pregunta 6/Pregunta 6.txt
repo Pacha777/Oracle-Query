@@ -1,0 +1,18 @@
+CREATE OR REPLACE TRIGGER ACTUALIZAR_SALARIO
+BEFORE UPDATE of SALARY
+ON EMPLEADO
+FOR EACH ROW
+BEGIN
+    insert into AD.AD_BITACORA(Nom_esquema, Nom_tabla, Nom_campo, Valor_anterior, Valor_actual) 
+    values (USER, 'Empleado', 'Salario', :old.salary, :new.salary);
+END;
+
+
+
+/
+
+
+UPDATE EMPLEADO
+SET SALARY = 1000
+WHERE EMPLOYEE_Id = 2;
+commit;

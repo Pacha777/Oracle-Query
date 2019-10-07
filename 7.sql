@@ -1,0 +1,1 @@
+Select count(DEPARTMENT_ID) from DEPARTMENT; -->Contar DEPARTMENT
